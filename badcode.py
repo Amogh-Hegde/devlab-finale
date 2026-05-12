@@ -1,6 +1,6 @@
 import os
 
-password = "admin123"
+
 
 students = []
 
