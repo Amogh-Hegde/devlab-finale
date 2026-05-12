@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        sonarQube 'SonarScanner'
-    }
-
     stages {
 
         stage('Checkout Code') {
@@ -20,7 +16,7 @@ pipeline {
                 withSonarQubeEnv('SonarCloud') {
 
                     sh '''
-                    sonar-scanner \
+                    /opt/sonar-scanner/bin/sonar-scanner \
                     -Dsonar.projectKey=Amogh-Hegde_devlab-finale \
                     -Dsonar.organization=amogh-hegde \
                     -Dsonar.sources=. \
